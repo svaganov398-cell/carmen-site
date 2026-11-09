@@ -1,0 +1,179 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Автосервис CARMEN Якутск | Ремонт авто</title>
+<meta name="description" content="СТО CARMEN в Якутске. Ремонт ходовой, двигателя, автоэлектрика.">
+<link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>🔧</text></svg>">
+<style>
+*{margin:0;padding:0;box-sizing:border-box}
+body{font-family:system-ui,-apple-system,sans-serif;background:#1a1a1a;color:#fff;line-height:1.5}
+header{background:linear-gradient(90deg,#1e3c72,#2a5298);padding:8px 0;position:sticky;top:0}
+.wrap{max-width:1100px;margin:0 auto;padding:0 15px}
+.hdr{display:flex;justify-content:space-between;align-items:center}
+.logo{display:flex;align-items:center;gap:8px;color:#fff;text-decoration:none}
+.logo-i{width:35px;height:35px;background:#fff;border-radius:6px;display:flex;align-items:center;justify-content:center;font-size:1.3em}
+.logo-t h1{font-size:1em;text-transform:uppercase}
+.hdr-r{display:flex;align-items:center;gap:8px}
+.ph{color:#fff;text-decoration:none;font-weight:bold}
+.ab{background:0 0;border:1px solid #fff;color:#fff;padding:3px 8px;border-radius:12px;font-size:.7em;cursor:pointer}
+.hero{min-height:50vh;display:flex;align-items:center;justify-content:center;text-align:center;background:linear-gradient(135deg,#0f0c29,#302b63,#24243e);padding:30px 20px}
+.hero h2{font-size:clamp(1.3em,4vw,2em);margin-bottom:10px}
+.hero p{font-size:.95em;margin-bottom:15px;opacity:.9}
+.btn{display:inline-block;background:linear-gradient(45deg,#f39c12,#e74c3c);color:#fff;padding:10px 24px;border-radius:22px;text-decoration:none;font-weight:bold;text-transform:uppercase;border:none;cursor:pointer;font-size:.9em}
+section{padding:35px 0}
+.st{text-align:center;font-size:1.4em;margin-bottom:20px;text-transform:uppercase}
+.st::after{content:'';display:block;width:45px;height:2px;background:#f39c12;margin:6px auto 0}
+.about{background:#222}
+.at{max-width:650px;margin:0 auto;text-align:center;color:#ccc;font-size:.9em}
+.ft{display:flex;flex-wrap:wrap;justify-content:center;gap:8px;margin-top:15px}
+.ft span{background:#333;padding:5px 10px;border-radius:12px;font-size:.8em;border-left:2px solid #2a5298}
+.srv{background:#2a2a2a}
+.gr{display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:12px}
+.cd{background:#333;border-radius:8px;overflow:hidden}
+.cd-i{width:100%;height:130px;display:flex;align-items:center;justify-content:center;font-size:3em}
+.cd-b{padding:12px}
+.cd h3{color:#f39c12;margin-bottom:5px;font-size:1em}
+.cd p{color:#bbb;font-size:.8em}
+.news{background:#1a1a1a}
+.nc{background:#252525;padding:15px;border-radius:8px;border:1px solid #333;cursor:pointer}
+.nc-d{font-size:.65em;color:#2a5298;background:rgba(42,82,152,.2);padding:2px 5px;border-radius:3px;display:inline-block;margin-bottom:5px}
+.rm{color:#f39c12;font-size:.75em;font-weight:bold;margin-top:5px;display:block}
+.ct{background:linear-gradient(135deg,#1e3c72,#2a5298)}
+.cw{display:grid;grid-template-columns:1fr 1fr;gap:20px;align-items:start}
+.fb{background:#fff;padding:18px;border-radius:10px;color:#333}
+.fg{margin-bottom:8px}
+.fg label{display:block;margin-bottom:2px;font-weight:600;font-size:.8em}
+.fc{width:100%;padding:7px;border:1px solid #ddd;border-radius:5px;font-size:.9em}
+.fc:focus{outline:none;border-color:#2a5298}
+textarea.fc{min-height:70px;resize:vertical}
+.cb{background:#f8f9fa;padding:8px;border-radius:5px;margin:10px 0;border-left:2px solid #2a5298}
+.cl{display:flex;gap:5px;align-items:flex-start;cursor:pointer;font-size:.75em;color:#555}
+.cl input{margin-top:2px;accent-color:#2a5298;width:13px;height:13px}
+.cl a{color:#2a5298;text-decoration:underline}
+.em{color:#e74c3c;font-size:.7em;margin-top:2px;display:none}
+.sm{color:#27ae60;font-weight:bold;text-align:center;margin-top:5px;display:none}
+footer{background:#111;padding:18px 0;text-align:center;color:#777;font-size:.75em}
+footer a{color:#777;text-decoration:none;margin:0 5px}
+.lp{display:none;background:#fff;color:#333;min-height:100vh;padding:20px 15px}
+.lp.a{display:block}
+.lh{display:flex;justify-content:space-between;align-items:center;margin-bottom:15px;border-bottom:1px solid #eee;padding-bottom:10px}
+.bb{background:#2a5298;color:#fff;border:none;padding:5px 10px;border-radius:12px;cursor:pointer;font-size:.8em}
+.ap{display:none;background:#f0f2f5;min-height:100vh;color:#333}
+.ap.a{display:block}
+.ls{height:100vh;display:flex;align-items:center;justify-content:center;background:linear-gradient(135deg,#1e3c72,#2a5298)}
+.lc{background:#fff;padding:18px;border-radius:10px;width:100%;max-width:280px;text-align:center}
+.al{display:flex;min-height:100vh}
+.sb{width:170px;background:#1e3c72;color:#fff;padding:10px 0;position:fixed;height:100%}
+.sb a{display:block;padding:7px 10px;color:#ccc;text-decoration:none;font-size:.8em}
+.sb a.a,.sb a:hover{background:#2a5298;color:#fff}
+.mc{margin-left:170px;padding:18px;flex:1}
+.sc{display:flex;gap:8px;margin-bottom:15px}
+.sc-d{background:#fff;padding:8px;border-radius:5px;flex:1;text-align:center}
+.sc-n{font-size:1.3em;font-weight:bold;color:#2a5298}
+table{width:100%;border-collapse:collapse;background:#fff;border-radius:5px;overflow:hidden}
+th,td{padding:7px;text-align:left;border-bottom:1px solid #eee;font-size:.75em}
+th{background:#f8f9fa;color:#2a5298}
+.bg{padding:2px 5px;border-radius:6px;font-size:.65em;color:#fff}
+.b-bl{background:#3498db}.b-gr{background:#27ae60}.b-rd{background:#e74c3c}
+.md{display:none;position:fixed;inset:0;background:rgba(0,0,0,.8);z-index:2000;align-items:center;justify-content:center;padding:12px}
+.md.o{display:flex}
+.md-c{background:#fff;color:#333;padding:18px;border-radius:10px;max-width:450px;width:100%;max-height:85vh;overflow-y:auto;position:relative}
+.cm{position:absolute;top:8px;right:10px;font-size:1.2em;cursor:pointer;color:#999}
+@media(max-width:768px){.hdr{flex-direction:column;gap:5px}.hero h2{font-size:1.2em}.cw{grid-template-columns:1fr}.sb{width:100%;height:auto;position:relative}.mc{margin-left:0}.al{flex-direction:column}.sc{flex-direction:column}}
+</style>
+</head>
+<body>
+<div id="sv">
+<header><div class="wrap hdr">
+<a href="#" class="logo" onclick="ss()"><div class="logo-i">🔧</div><div class="logo-t"><h1>CARMEN</h1></div></a>
+<div class="hdr-r"><a href="tel:2915858" class="ph">291 58 58</a><button class="ab" onclick="sa()">Вход</button></div>
+</div></header>
+
+<section class="hero"><div>
+<h2>Профессиональный ремонт автомобилей</h2>
+<p>Качественный сервис, гарантия в Якутске</p>
+<a href="#ct" class="btn">Записаться</a>
+</div></section>
+
+<section class="about"><div class="wrap">
+<h2 class="st">О сервисе</h2>
+<div class="at"><p>Автосервис <strong>CARMEN</strong> — СТО в Якутске на ул. Жорницкого, 22/6. Ремонт ходовой, двигателей, автоэлектрика.</p>
+<div class="ft"><span>Честные цены</span><span>Гарантия</span><span>Опытные мастера</span><span>Оборудование</span></div></div>
+</div></section>
+
+<section class="srv"><div class="wrap">
+<h2 class="st">Услуги</h2>
+<div class="gr">
+<div class="cd"><div class="cd-i" style="background:linear-gradient(135deg,#667eea,#764ba2)">🔧</div><div class="cd-b"><h3>Ремонт ходовой</h3><p>Диагностика подвески, замена амортизаторов.</p></div></div>
+<div class="cd"><div class="cd-i" style="background:linear-gradient(135deg,#f093fb,#f5576c)">⚡</div><div class="cd-b"><h3>Автоэлектрика</h3><p>Ремонт проводки, генераторов.</p></div></div>
+<div class="cd"><div class="cd-i" style="background:linear-gradient(135deg,#4facfe,#00f2fe)">️</div><div class="cd-b"><h3>Двигатели</h3><p>Капремонт, замена ГРМ.</p></div></div>
+<div class="cd"><div class="cd-i" style="background:linear-gradient(135deg,#43e97b,#38f9d7)">🔄</div><div class="cd-b"><h3>ТО</h3><p>Замена масла, фильтров.</p></div></div>
+<div class="cd"><div class="cd-i" style="background:linear-gradient(135deg,#fa709a,#fee140)">📊</div><div class="cd-b"><h3>Диагностика</h3><p>Компьютерная проверка.</p></div></div>
+<div class="cd"><div class="cd-i" style="background:linear-gradient(135deg,#a8edea,#fed6e3)">❄️</div><div class="cd-b"><h3>Шиномонтаж</h3><p>Балансировка, ремонт.</p></div></div>
+</div></div></section>
+
+<section class="news"><div class="wrap">
+<h2 class="st">Новости</h2>
+<div class="gr" id="ng"></div>
+</div></section>
+
+<section class="ct" id="ct"><div class="wrap cw">
+<div><h2 style="font-size:1.8em;margin-bottom:10px">Свяжитесь</h2><p style="margin-bottom:15px">Оставьте заявку — перезвоним.</p>
+<div style="margin-bottom:10px"> <strong>291 58 58</strong></div>
+<div style="margin-bottom:10px">📍 ул. Жорницкого, 22/6</div>
+<div>🕐 Пн-Пт: 9-18, Сб: 10-15</div></div>
+<div class="fb"><h3 style="text-align:center;margin-bottom:10px;color:#2a5298;font-size:1.2em">Запись</h3>
+<form id="cf"><div class="fg"><label>Имя *</label><input type="text" id="n" class="fc" required></div>
+<div class="fg"><label>Телефон *</label><input type="tel" id="p" class="fc" required placeholder="+7 (___) ___-__-__"></div>
+<div class="fg"><label>Услуга</label><input type="text" id="s" class="fc"></div>
+<div class="fg"><label>Сообщение</label><textarea id="m" class="fc"></textarea></div>
+<div class="cb"><label class="cl"><input type="checkbox" id="co" required><span>Я согласен на <a href="/privacy-policy" onclick="sl('privacy');return false">обработку персональных данных</a>, принимаю <a href="/data-processing" onclick="sl('data-processing');return false">политику конфиденциальности</a> и условия обработки данных.</span></label><div class="em" id="ce">Необходимо согласие</div></div>
+<button type="submit" class="btn" style="width:100%">Отправить</button>
+<div class="sm" id="su">✅ Отправлено!</div></form></div>
+</div></section>
+
+<footer><div class="wrap"><p>© 2026 CARMEN. ул. Жорницкого 22/6.</p>
+<div style="margin-top:5px"><a href="#" onclick="sl('privacy');return false">Политика</a> | <a href="#" onclick="sl('data-processing');return false">Обработка данных</a></div></div></footer>
+</div>
+
+<div id="lv" class="lp"><div class="wrap"><div class="lh"><h2 id="lt">Документ</h2><button class="bb" onclick="ss()">← На сайт</button></div><div id="lc"></div></div></div>
+
+<div id="av" class="ap"><div id="al" class="ls"><div class="lc">
+<h2 style="color:#2a5298;margin-bottom:10px">Вход</h2>
+<input type="text" id="au" placeholder="Логин" class="fc" style="margin-bottom:6px">
+<input type="password" id="ap2" placeholder="Пароль" class="fc" style="margin-bottom:10px">
+<button onclick="la()" class="btn" style="width:100%">Войти</button>
+<p style="margin-top:8px;font-size:.65em;color:#666">admin / admin123</p>
+<button onclick="ss()" style="margin-top:5px;background:0 0;border:none;color:#666;cursor:pointer;font-size:.8em">← На сайт</button>
+</div></div>
+<div id="ad" style="display:none" class="al"><aside class="sb">
+<div style="padding:0 10px 10px;font-weight:bold">CARMEN</div>
+<nav><a href="#" onclick="lt2('requests')" id="t-r" class="a"> Заявки</a><a href="#" onclick="lt2('users')" id="t-u"> Пользователи</a><a href="#" onclick="lt2('posts')" id="t-p">📝 Новости</a><a href="#" onclick="lo()" style="margin-top:10px;color:#ff6b6b">🚪 Выход</a><a href="#" onclick="ss()" style="color:#fff">← На сайт</a></nav>
+</aside><main class="mc" id="ac"></main></div></div>
+
+<div id="nm" class="md" onclick="if(event.target===this)this.classList.remove('o')"><div class="md-c"><span class="cm" onclick="document.getElementById('nm').classList.remove('o')">&times;</span><div id="nb"></div></div></div>
+
+<script>
+const D={u:JSON.parse(localStorage.getItem('cu'))||[{id:1,l:'admin',p:'admin123',r:'admin'}],r:JSON.parse(localStorage.getItem('cr'))||[],p:JSON.parse(localStorage.getItem('cp'))||[]},sv=()=>{localStorage.setItem('cu',JSON.stringify(D.u));localStorage.setItem('cr',JSON.stringify(D.r));localStorage.setItem('cp',JSON.stringify(D.p))};
+function ss(){document.getElementById('sv').style.display='block';document.getElementById('lv').classList.remove('a');document.getElementById('av').classList.remove('a');rn()}
+function sl(t){document.getElementById('sv').style.display='none';document.getElementById('av').classList.remove('a');document.getElementById('lv').classList.add('a');const l=document.getElementById('lt'),c=document.getElementById('lc');if(t==='privacy'){l.innerText='Политика';c.innerHTML='<h3>1. Общие</h3><p>Политика обработки данных...</p>'}else{l.innerText='Согласие';c.innerHTML='<h3>1. Согласие</h3><p>Согласие на обработку по 152-ФЗ.</p>'}}
+function sa(){document.getElementById('sv').style.display='none';document.getElementById('lv').classList.remove('a');document.getElementById('av').classList.add('a');document.getElementById('al').style.display='flex';document.getElementById('ad').style.display='none'}
+function rn(){const g=document.getElementById('ng');if(D.p.length===0){g.innerHTML='<p style="text-align:center;grid-column:1/-1;color:#888">Нет новостей</p>';return}g.innerHTML=[...D.p].reverse().slice(0,6).map(x=>`<div class="nc" onclick="on(${x.id})"><span class="nc-d">${new Date(x.d).toLocaleDateString()}</span><h3>${x.t}</h3><p>${x.c.substring(0,70)}...</p><span class="rm">→</span></div>`).join('')}
+function on(id){const p=D.p.find(x=>x.id===id);if(!p)return;document.getElementById('nb').innerHTML=`<span style="color:#2a5298;font-size:.75em">${new Date(p.d).toLocaleString()}</span><h2 style="margin:6px 0;color:#333">${p.t}</h2><div style="line-height:1.5;color:#555;white-space:pre-wrap">${p.c}</div>`;document.getElementById('nm').classList.add('o')}
+document.getElementById('cf').addEventListener('submit',function(e){e.preventDefault();const c=document.getElementById('co');if(!c.checked){document.getElementById('ce').style.display='block';return}document.getElementById('ce').style.display='none';D.r.push({id:Date.now(),n:document.getElementById('n').value,p:document.getElementById('p').value,s:document.getElementById('s').value,m:document.getElementById('m').value,st:'new',d:new Date().toISOString()});sv();this.reset();document.getElementById('su').style.display='block';setTimeout(()=>document.getElementById('su').style.display='none',3000)});
+document.querySelector('input[type=tel]').addEventListener('input',function(e){let x=e.target.value.replace(/\D/g,'').match(/(\d{0,1})(\d{0,3})(\d{0,3})(\d{0,2})(\d{0,2})/);e.target.value=!x[2]?'+7':'+7 ('+x[2]+(x[3]?') '+x[3]:'')+(x[4]?'-'+x[4]:'')+(x[5]?'-'+x[5]:'')});
+function la(){const u=document.getElementById('au').value,p=document.getElementById('ap2').value;if(D.u.find(x=>x.l===u&&x.p===p)){sessionStorage.setItem('ca','1');ia()}else alert('Неверно')}
+function lo(){sessionStorage.removeItem('ca');sa()}
+function ia(){document.getElementById('al').style.display='none';document.getElementById('ad').style.display='flex';lt2('requests')}
+if(sessionStorage.getItem('ca'))ia();
+function lt2(t){document.querySelectorAll('.sb a').forEach(a=>a.classList.remove('a'));const a=document.getElementById('ac');if(t==='requests'){const n=D.r.filter(x=>x.st==='new').length;a.innerHTML=`<h2>Заявки</h2><div class="sc"><div class="sc-d"><div class="sc-n">${D.r.length}</div>Всего</div><div class="sc-d" style="background:#fff3cd"><div class="sc-n" style="color:#856404">${n}</div>Новых</div></div><table><thead><tr><th>ID</th><th>Дата</th><th>Имя</th><th>Телефон</th><th>Статус</th><th>Действия</th></tr></thead><tbody>${[...D.r].reverse().map(x=>`<tr><td>#${String(x.id).slice(-4)}</td><td>${new Date(x.d).toLocaleDateString()}</td><td>${x.n}</td><td>${x.p}</td><td><span class="bg ${x.st==='new'?'b-bl':x.st==='done'?'b-gr':'b-rd'}">${x.st}</span></td><td><select onchange="us(${x.id},this.value)" style="padding:2px"><option value="new" ${x.st==='new'?'selected':''}>Новая</option><option value="work" ${x.st==='work'?'selected':''}>В работе</option><option value="done" ${x.st==='done'?'selected':''}>Готово</option></select> <button onclick="dr(${x.id})" style="color:red;border:none;background:none;cursor:pointer">🗑️</button></td></tr>`).join('')}</tbody></table>`}else if(t==='users'){a.innerHTML=`<div style="display:flex;justify-content:space-between;margin-bottom:10px"><h2>Пользователи</h2><button onclick="au2()" class="btn" style="padding:4px 8px;font-size:.7em">+ Добавить</button></div><table><thead><tr><th>ID</th><th>Логин</th><th>Роль</th></tr></thead><tbody>${D.u.map(x=>`<tr><td>${x.id}</td><td>${x.l}</td><td><span class="bg b-bl">${x.r}</span></td></tr>`).join('')}</tbody></table>`}else if(t==='posts'){a.innerHTML=`<div style="display:flex;justify-content:space-between;margin-bottom:10px"><h2>Новости</h2><button onclick="ap2()" class="btn" style="padding:4px 8px;font-size:.7em">+ Новая</button></div>${[...D.p].reverse().map(x=>`<div style="background:#fff;padding:8px;margin-bottom:5px;border-radius:5px"><strong>${x.t}</strong><div style="font-size:.65em;color:#888">${new Date(x.d).toLocaleString()}</div></div>`).join('')}`}}
+function us(id,v){const r=D.r.find(x=>x.id===id);if(r){r.st=v;sv();lt2('requests')}}
+function dr(id){if(confirm('Удалить?')){D.r=D.r.filter(x=>x.id!==id);sv();lt2('requests')}}
+function au2(){const l=prompt('Логин:');if(!l)return;const p=prompt('Пароль:');if(!p)return;D.u.push({id:Date.now(),l:l,p:p,r:'operator'});sv();lt2('users')}
+function ap2(){const t=prompt('Заголовок:');if(!t)return;const c=prompt('Текст:');if(!c)return;D.p.push({id:Date.now(),t:t,c:c,d:new Date().toISOString()});sv();lt2('posts');rn()}
+rn();
+</script>
+</body>
+</html>
