@@ -1,0 +1,22 @@
+# robots.txt для Автосервиса CARMEN
+# https://svaganov398.github.io/carmen-site/
+
+User-agent: *
+Allow: /
+Allow: /index.html
+
+# Запрет системных файлов
+Disallow: /.git/
+Disallow: /.github/
+
+# Карты сайта
+Sitemap: https://svaganov398.github.io/carmen-site/sitemap.xml
+
+User-agent: Googlebot
+Allow: /
+Crawl-delay: 1
+
+User-agent: Yandex
+Allow: /
+Crawl-delay: 1
+Clean-Param: utm_source&utm_medium&utm_campaign&utm_content&utm_term
