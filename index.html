@@ -51,7 +51,7 @@ section{padding:35px 0}
 .srv{background:#2a2a2a}
 .gr{display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:12px}
 .cd{background:#333;border-radius:8px;overflow:hidden}
-.cd-i{width:100%;height:130px;display:flex;align-items:center;justify-content:center;font-size:3em}
+.card-img{width:100%;height:200px;object-fit:cover;border-radius:8px 8px 0 0;background:#444}
 .cd-b{padding:12px}
 .cd h3{color:#f39c12;margin-bottom:5px;font-size:1em}
 .cd p{color:#bbb;font-size:.8em}
@@ -123,16 +123,77 @@ th{background:#f8f9fa;color:#2a5298}
 <div class="ft"><span>Честные цены</span><span>Гарантия</span><span>Опытные мастера</span><span>Оборудование</span></div></div>
 </div></section>
 
+<!-- СЕКЦИЯ УСЛУГ С ВАШИМИ ФОТОГРАФИЯМИ -->
 <section class="srv" id="services"><div class="wrap">
 <h2 class="st">Услуги автосервиса в Якутске</h2>
 <div class="gr">
-    <!-- Чтобы добавить реальные фото, замените div.cd-i на <img src="images/ваше_фото.webp" class="card-img" width="400" height="260" loading="lazy" alt="..."> -->
-    <div class="cd"><div class="cd-i" style="background:linear-gradient(135deg,#667eea,#764ba2)">🔧</div><div class="cd-b"><h3>Ремонт ходовой в Якутске</h3><p>Диагностика подвески, замена амортизаторов, рычагов.</p></div></div>
-    <div class="cd"><div class="cd-i" style="background:linear-gradient(135deg,#f093fb,#f5576c)">⚡</div><div class="cd-b"><h3>Автоэлектрик Якутск</h3><p>Ремонт проводки, генераторов, стартеров. Установка сигнализаций.</p></div></div>
-    <div class="cd"><div class="cd-i" style="background:linear-gradient(135deg,#4facfe,#00f2fe)">🛠️</div><div class="cd-b"><h3>Ремонт двигателя Якутск</h3><p>Капремонт, замена ГРМ, прокладок, ремонт ГБЦ.</p></div></div>
-    <div class="cd"><div class="cd-i" style="background:linear-gradient(135deg,#43e97b,#38f9d7)">🔄</div><div class="cd-b"><h3>Замена масла Якутск</h3><p>Плановое ТО: масло, фильтры, свечи, тормозные колодки.</p></div></div>
-    <div class="cd"><div class="cd-i" style="background:linear-gradient(135deg,#fa709a,#fee140)">📊</div><div class="cd-b"><h3>Компьютерная диагностика авто</h3><p>Полная проверка электронных систем, чтение и сброс ошибок.</p></div></div>
-    <div class="cd"><div class="cd-i" style="background:linear-gradient(135deg,#a8edea,#fed6e3)">❄️</div><div class="cd-b"><h3>Шиномонтаж Якутск</h3><p>Балансировка колес, ремонт проколов, сезонная замена шин.</p></div></div>
+
+    <!-- 1. Ремонт ходовой -->
+    <div class="cd">
+        <img src="images/hodovaya.webp" 
+             alt="Ремонт ходовой части и подвески автомобиля в Якутске" 
+             class="card-img" 
+             width="600" height="400" 
+             loading="lazy" 
+             decoding="async">
+        <div class="cd-b"><h3>Ремонт ходовой в Якутске</h3><p>Диагностика подвески, замена амортизаторов, рычагов, сайлентблоков.</p></div>
+    </div>
+
+    <!-- 2. Автоэлектрика -->
+    <div class="cd">
+        <img src="images/electrica.webp" 
+             alt="Услуги автоэлектрика: ремонт проводки и генераторов в Якутске" 
+             class="card-img" 
+             width="600" height="400" 
+             loading="lazy" 
+             decoding="async">
+        <div class="cd-b"><h3>Автоэлектрик Якутск</h3><p>Ремонт проводки, генераторов, стартеров. Установка сигнализаций.</p></div>
+    </div>
+
+    <!-- 3. Ремонт двигателя -->
+    <div class="cd">
+        <img src="images/remont-dvigatelya.webp" 
+             alt="Капитальный и текущий ремонт двигателей автомобилей в Якутске" 
+             class="card-img" 
+             width="600" height="400" 
+             loading="lazy" 
+             decoding="async">
+        <div class="cd-b"><h3>Ремонт двигателя Якутск</h3><p>Капремонт, замена ГРМ, прокладок, ремонт ГБЦ.</p></div>
+    </div>
+
+    <!-- 4. Замена масла / ТО -->
+    <div class="cd">
+        <img src="images/zamena-masla.webp" 
+             alt="Плановое техническое обслуживание и замена масла в Якутске" 
+             class="card-img" 
+             width="600" height="400" 
+             loading="lazy" 
+             decoding="async">
+        <div class="cd-b"><h3>Замена масла Якутск</h3><p>Плановое ТО: масло, фильтры, свечи, тормозные колодки.</p></div>
+    </div>
+
+    <!-- 5. Компьютерная диагностика -->
+    <div class="cd">
+        <img src="images/diagnostika.webp" 
+             alt="Компьютерная диагностика электронных систем авто сканером" 
+             class="card-img" 
+             width="600" height="400" 
+             loading="lazy" 
+             decoding="async">
+        <div class="cd-b"><h3>Компьютерная диагностика авто</h3><p>Полная проверка всех систем, чтение и сброс ошибок.</p></div>
+    </div>
+
+    <!-- 6. Шиномонтаж -->
+    <div class="cd">
+        <img src="images/shinomontazh.webp" 
+             alt="Профессиональный шиномонтаж и балансировка колес в Якутске" 
+             class="card-img" 
+             width="600" height="400" 
+             loading="lazy" 
+             decoding="async">
+        <div class="cd-b"><h3>Шиномонтаж Якутск</h3><p>Балансировка колес, ремонт проколов, сезонная замена шин.</p></div>
+    </div>
+
 </div></div></section>
 
 <section class="news" id="news"><div class="wrap">
