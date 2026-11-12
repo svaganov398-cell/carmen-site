@@ -37,10 +37,31 @@ header{background:linear-gradient(90deg,#1e3c72,#2a5298);padding:8px 0;position:
 .hdr-r{display:flex;align-items:center;gap:8px}
 .ph{color:#fff;text-decoration:none;font-weight:bold}
 .ab{background:0 0;border:1px solid #fff;color:#fff;padding:3px 8px;border-radius:12px;font-size:.7em;cursor:pointer}
-.hero{min-height:50vh;display:flex;align-items:center;justify-content:center;text-align:center;background:linear-gradient(135deg,#0f0c29,#302b63,#24243e);padding:30px 20px}
-.hero h2{font-size:clamp(1.3em,4vw,2em);margin-bottom:10px}
-.hero p{font-size:.95em;margin-bottom:15px;opacity:.9}
-.btn{display:inline-block;background:linear-gradient(45deg,#f39c12,#e74c3c);color:#fff;padding:10px 24px;border-radius:22px;text-decoration:none;font-weight:bold;text-transform:uppercase;border:none;cursor:pointer;font-size:.9em}
+
+/* HERO С ФОНОМ АВТОСЕРВИСА */
+.hero{
+    min-height:55vh;
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    text-align:center;
+    position:relative;
+    background: url('images/hero-bg.webp') center/cover no-repeat;
+    padding:40px 20px;
+}
+/* Затемняющий overlay для читаемости текста */
+.hero::before{
+    content:'';
+    position:absolute;
+    inset:0;
+    background: linear-gradient(135deg, rgba(15,12,41,0.85) 0%, rgba(48,43,99,0.75) 50%, rgba(36,36,62,0.85) 100%);
+}
+.hero-content{position:relative;z-index:2;max-width:700px}
+.hero h2{font-size:clamp(1.4em,4vw,2.2em);margin-bottom:12px;text-shadow:0 2px 8px rgba(0,0,0,0.7)}
+.hero p{font-size:1em;margin-bottom:18px;opacity:0.95;text-shadow:0 1px 4px rgba(0,0,0,0.7)}
+.btn{display:inline-block;background:linear-gradient(45deg,#f39c12,#e74c3c);color:#fff;padding:12px 28px;border-radius:22px;text-decoration:none;font-weight:bold;text-transform:uppercase;border:none;cursor:pointer;font-size:.95em;box-shadow:0 4px 12px rgba(0,0,0,0.3)}
+.btn:hover{transform:translateY(-2px);box-shadow:0 6px 16px rgba(0,0,0,0.4)}
+
 section{padding:35px 0}
 .st{text-align:center;font-size:1.4em;margin-bottom:20px;text-transform:uppercase}
 .st::after{content:'';display:block;width:45px;height:2px;background:#f39c12;margin:6px auto 0}
@@ -100,7 +121,7 @@ th{background:#f8f9fa;color:#2a5298}
 .md.o{display:flex}
 .md-c{background:#fff;color:#333;padding:18px;border-radius:10px;max-width:450px;width:100%;max-height:85vh;overflow-y:auto;position:relative}
 .cm{position:absolute;top:8px;right:10px;font-size:1.2em;cursor:pointer;color:#999}
-@media(max-width:768px){.hdr{flex-direction:column;gap:5px}.hero h2{font-size:1.2em}.cw{grid-template-columns:1fr}.sb{width:100%;height:auto;position:relative}.mc{margin-left:0}.al{flex-direction:column}.sc{flex-direction:column}}
+@media(max-width:768px){.hdr{flex-direction:column;gap:5px}.hero h2{font-size:1.3em}.cw{grid-template-columns:1fr}.sb{width:100%;height:auto;position:relative}.mc{margin-left:0}.al{flex-direction:column}.sc{flex-direction:column}}
 </style>
 </head>
 <body>
@@ -111,11 +132,14 @@ th{background:#f8f9fa;color:#2a5298}
 <div class="hdr-r"><a href="tel:2915858" class="ph">291 58 58</a><button class="ab" onclick="sa()">Вход</button></div>
 </div></header>
 
-<section class="hero" id="home"><div>
+<!-- HERO С ФОНОМ АВТОСЕРВИСА -->
+<section class="hero" id="home">
+<div class="hero-content">
 <h2>Автосервис CARMEN — ремонт авто в Якутске</h2>
-<p>Профессиональное СТО на ул. Жорницкого, 22/6. Гарантия качества.</p>
+<p>Профессиональное СТО на ул. Жорницкого, 22/6. Современное оборудование, опытные мастера, гарантия качества.</p>
 <a href="#contact" class="btn">Записаться на ремонт</a>
-</div></section>
+</div>
+</section>
 
 <section class="about" id="about"><div class="wrap">
 <h2 class="st">Почему выбирают наше СТО в Якутске</h2>
@@ -123,77 +147,33 @@ th{background:#f8f9fa;color:#2a5298}
 <div class="ft"><span>Честные цены</span><span>Гарантия</span><span>Опытные мастера</span><span>Оборудование</span></div></div>
 </div></section>
 
-<!-- СЕКЦИЯ УСЛУГ С ВАШИМИ ФОТОГРАФИЯМИ -->
 <section class="srv" id="services"><div class="wrap">
 <h2 class="st">Услуги автосервиса в Якутске</h2>
 <div class="gr">
-
-    <!-- 1. Ремонт ходовой -->
     <div class="cd">
-        <img src="images/hodovaya.webp" 
-             alt="Ремонт ходовой части и подвески автомобиля в Якутске" 
-             class="card-img" 
-             width="600" height="400" 
-             loading="lazy" 
-             decoding="async">
+        <img src="images/hodovaya.webp" alt="Ремонт ходовой части и подвески автомобиля в Якутске" class="card-img" width="600" height="400" loading="lazy" decoding="async">
         <div class="cd-b"><h3>Ремонт ходовой в Якутске</h3><p>Диагностика подвески, замена амортизаторов, рычагов, сайлентблоков.</p></div>
     </div>
-
-    <!-- 2. Автоэлектрика -->
     <div class="cd">
-        <img src="images/electrica.webp" 
-             alt="Услуги автоэлектрика: ремонт проводки и генераторов в Якутске" 
-             class="card-img" 
-             width="600" height="400" 
-             loading="lazy" 
-             decoding="async">
+        <img src="images/electrica.webp" alt="Услуги автоэлектрика: ремонт проводки и генераторов в Якутске" class="card-img" width="600" height="400" loading="lazy" decoding="async">
         <div class="cd-b"><h3>Автоэлектрик Якутск</h3><p>Ремонт проводки, генераторов, стартеров. Установка сигнализаций.</p></div>
     </div>
-
-    <!-- 3. Ремонт двигателя -->
     <div class="cd">
-        <img src="images/remont-dvigatelya.webp" 
-             alt="Капитальный и текущий ремонт двигателей автомобилей в Якутске" 
-             class="card-img" 
-             width="600" height="400" 
-             loading="lazy" 
-             decoding="async">
+        <img src="images/remont-dvigatelya.webp" alt="Капитальный и текущий ремонт двигателей автомобилей в Якутске" class="card-img" width="600" height="400" loading="lazy" decoding="async">
         <div class="cd-b"><h3>Ремонт двигателя Якутск</h3><p>Капремонт, замена ГРМ, прокладок, ремонт ГБЦ.</p></div>
     </div>
-
-    <!-- 4. Замена масла / ТО -->
     <div class="cd">
-        <img src="images/zamena-masla.webp" 
-             alt="Плановое техническое обслуживание и замена масла в Якутске" 
-             class="card-img" 
-             width="600" height="400" 
-             loading="lazy" 
-             decoding="async">
+        <img src="images/zamena-masla.webp" alt="Плановое техническое обслуживание и замена масла в Якутске" class="card-img" width="600" height="400" loading="lazy" decoding="async">
         <div class="cd-b"><h3>Замена масла Якутск</h3><p>Плановое ТО: масло, фильтры, свечи, тормозные колодки.</p></div>
     </div>
-
-    <!-- 5. Компьютерная диагностика -->
     <div class="cd">
-        <img src="images/diagnostika.webp" 
-             alt="Компьютерная диагностика электронных систем авто сканером" 
-             class="card-img" 
-             width="600" height="400" 
-             loading="lazy" 
-             decoding="async">
+        <img src="images/diagnostika.webp" alt="Компьютерная диагностика электронных систем авто сканером" class="card-img" width="600" height="400" loading="lazy" decoding="async">
         <div class="cd-b"><h3>Компьютерная диагностика авто</h3><p>Полная проверка всех систем, чтение и сброс ошибок.</p></div>
     </div>
-
-    <!-- 6. Шиномонтаж -->
     <div class="cd">
-        <img src="images/shinomontazh.webp" 
-             alt="Профессиональный шиномонтаж и балансировка колес в Якутске" 
-             class="card-img" 
-             width="600" height="400" 
-             loading="lazy" 
-             decoding="async">
+        <img src="images/shinomontazh.webp" alt="Профессиональный шиномонтаж и балансировка колес в Якутске" class="card-img" width="600" height="400" loading="lazy" decoding="async">
         <div class="cd-b"><h3>Шиномонтаж Якутск</h3><p>Балансировка колес, ремонт проколов, сезонная замена шин.</p></div>
     </div>
-
 </div></div></section>
 
 <section class="news" id="news"><div class="wrap">
@@ -211,8 +191,6 @@ th{background:#f8f9fa;color:#2a5298}
 <div class="fg"><label>Телефон *</label><input type="tel" id="p" class="fc" required placeholder="+7 (___) ___-__-__"></div>
 <div class="fg"><label>Услуга</label><input type="text" id="s" class="fc" placeholder="Например: ремонт ходовой"></div>
 <div class="fg"><label>Сообщение</label><textarea id="m" class="fc"></textarea></div>
-
-<!-- ТОЧНЫЙ ТЕКСТ СОГЛАСИЯ ИЗ БАЗЫ ЗНАНИЙ -->
 <div class="cb">
 <label class="cl">
 <input type="checkbox" id="co" required>
@@ -220,7 +198,6 @@ th{background:#f8f9fa;color:#2a5298}
 </label>
 <div class="em" id="ce">Необходимо согласие</div>
 </div>
-
 <button type="submit" class="btn" style="width:100%">Отправить заявку</button>
 <div class="sm" id="su">✅ Заявка отправлена!</div></form></div>
 </div></section>
